@@ -1,19 +1,24 @@
-import './App.css';
 import { useState } from 'react';
 
 function App() {
 
-  let [Incrementar, SetIncrementar] = useState(0)
+  let [Valor, SetValor] = useState(0)
 
-  function Click () {
-    let NumeroDeClicks = Incrementar + 1
-    SetIncrementar(NumeroDeClicks)
+  function ClickAumentar () {
+    let Aumentar = Valor + 1
+    SetValor(Aumentar)
+  }
+
+  function ClickDisminuir () {
+    let Disminuir = Valor - 1
+    SetValor(Disminuir)
   }
 
   return (
     <>
-    <h1>{Incrementar}</h1>
-    <button onClick={Click}>Incrementar</button>
+    <h1>{Valor}</h1>
+    <button onClick={ClickAumentar}>Aumentar</button>
+    <button onClick={ClickDisminuir}>Disminuir</button>
     </>
   );
 }
