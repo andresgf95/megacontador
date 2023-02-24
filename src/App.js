@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import Boton from './boton.jsx';
+import Boton from './components/boton.jsx';
+import NovoBoton from './components/NovoBoton.jsx';
 
 function App() {
 
