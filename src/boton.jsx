@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Styles from './boton.module.css'
 
 function Boton({texto, operador}) {
 
@@ -11,7 +12,7 @@ function Boton({texto, operador}) {
     }
 
   return (
-  <button onClick={BotonClick}>{texto}({Click})</button>
+  <button className={Styles.Boton} onClick={BotonClick}>{texto}({Click})</button>
   )
 }
 
