@@ -19,7 +19,10 @@ function App() {
   function ContadorAuto () {
     SetAuto(true)
   }
-  
+
+  function PararContador() {
+    SetAuto(false)
+  }
   
   useEffect(
       ()=> {
@@ -36,6 +39,7 @@ function App() {
       <Boton texto='+' operador={NumeroDeIncrementos}/>
       <Boton texto='-' operador={NumeroDeDisminucion}/>
       <Boton texto='Auto' operador={ContadorAuto}/>
+      <Boton texto='stop' operador={PararContador}/>
     </>
   );
 }
