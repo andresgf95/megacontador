@@ -39,8 +39,8 @@ function App() {
       <h1>{Valor}</h1>
       <Boton texto='+' operador={NumeroDeIncrementos}/>
       <Boton texto='-' operador={NumeroDeDisminucion}/>
-      <Boton texto='Auto' operador={ContadorAuto}/>
-      <Boton texto='stop' operador={PararContador}/>
+      <NovoBoton texto='Auto' operador={ContadorAuto}/>
+      <NovoBoton texto='stop' operador={PararContador}/>
     </>
   );
 }
