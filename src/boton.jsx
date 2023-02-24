@@ -1,17 +1,17 @@
 import { useState } from 'react';
 
-function Boton(props) {
+function Boton({texto, operador}) {
 
   let [Click, SetClick] = useState(0)
 
   function BotonClick() {
     const NovoClick = Click + 1
     SetClick(NovoClick)
-    props.operador()
+    operador()
     }
 
   return (
-  <button onClick={BotonClick}>{props.texto}({Click})</button>
+  <button onClick={BotonClick}>{texto}({Click})</button>
   )
 }
 
