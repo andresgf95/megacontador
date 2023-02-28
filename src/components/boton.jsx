@@ -13,7 +13,7 @@ function Boton({texto, operador, type="primary"}) {
 
   return (
   <button className={
-          "btn" +
+          "btn " +
           ( type === "primary" ? "btn-primary" : "") +
           ( type === "secondary" ? "btn-secondary" : "") +
           ( type === "success" ? "btn-success" : "") +
