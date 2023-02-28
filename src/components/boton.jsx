@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Styles from './boton.module.css'
+//import Styles from './boton.module.css'//
 
-function Boton({texto, operador}) {
+function Boton({texto, operador, type="primary"}) {
 
   let [Click, SetClick] = useState(0)
 
@@ -12,7 +12,21 @@ function Boton({texto, operador}) {
     }
 
   return (
-  <button className={Styles.Boton} onClick={BotonClick}>{texto}({Click})</button>
+  <button className={
+          "btn" +
+          ( type === "primary" ? "btn-primary" : "") +
+          ( type === "secondary" ? "btn-secondary" : "") +
+          ( type === "success" ? "btn-success" : "") +
+          ( type === "danger" ? "btn-danger" : "") +
+          ( type === "warning" ? "btn-warning" : "") +
+          ( type === "info" ? "btn-info" : "") +
+          ( type === "ligth" ? "btn-ligth" : "") +
+          ( type === "dark" ? "btn-dark" : "")
+  }
+
+   onClick={BotonClick}>
+    {texto}<span className='badge badge-light'>{Click}</span>
+  </button>
   )
 }
 

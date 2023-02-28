@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Styles from './boton.module.css'
+//import Styles from './boton.module.css'//
 
 function NovoBoton({texto, operador}) {
 
@@ -12,7 +12,7 @@ function NovoBoton({texto, operador}) {
     }
 
   return (
-  <button className={Styles.Boton} onClick={BotonClick}>{texto}</button>
+  <button onClick={BotonClick}>{texto}</button>
   )
 }
 

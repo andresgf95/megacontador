@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Boton from './components/boton.jsx';
+import NovoBoton from './components/NovoBoton.jsx'
 
 function App() {
 
@@ -81,17 +82,39 @@ function App() {
   )
 
   return (
+  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group mr-2" role="group" aria-label="First group">
+        <Boton texto='+' type='btn-primary' operador={NumeroDeIncrementos}/>
+        <Boton texto='-' type='btn btn-secondary' operador={NumeroDeDisminucion}/>
+      </div>
+      <div class="btn-group mr-2" role="group" aria-label="Second group">
+        <button type="button" class="btn btn-secondary">5</button>
+        <button type="button" class="btn btn-secondary">6</button>
+        <button type="button" class="btn btn-secondary">7</button>
+      </div>
+      <div class="btn-group" role="group" aria-label="Third group">
+        <button type="button" class="btn btn-secondary">8</button>
+      </div>
+
+
+
+
+
+
+
     <>
       <h1>{Valor}</h1>
       <Boton texto='+' operador={NumeroDeIncrementos}/>
       <Boton texto='-' operador={NumeroDeDisminucion}/>
-      <Boton texto='Auto' operador={ContadorAuto}/>
-      <Boton texto='stop' operador={PararContador}/>
-      <Boton texto='Turbo' operador={ContadorTurbo}/>
-      <Boton texto='Hiper Turbo' operador={ContadorHiperTurbo}/>
-      <Boton texto='Ultra Turbo' operador={ContadorUltraTurbo}/>
-      <Boton texto='Reiniciar' operador={Reiniciar}/>
+      <NovoBoton texto='Auto' operador={ContadorAuto}/>
+      <NovoBoton texto='stop' operador={PararContador}/>
+      <NovoBoton texto='Turbo' operador={ContadorTurbo}/>
+      <NovoBoton texto='Hiper Turbo' operador={ContadorHiperTurbo}/>
+      <NovoBoton texto='Ultra Turbo' operador={ContadorUltraTurbo}/>
+      <NovoBoton texto='Reiniciar' operador={Reiniciar}/>
     </>
+  </div>
+
   );
 }
 
