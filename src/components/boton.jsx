@@ -1,5 +1,4 @@
 import { useState } from 'react';
-//import Styles from './boton.module.css'//
 
 function Boton({texto, operador, type="primary"}) {
 
