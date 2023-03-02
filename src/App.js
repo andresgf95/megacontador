@@ -48,10 +48,10 @@ function App() {
 
   useEffect (
       ()=> {
-      let Tempo
-      let SuperTempo  
+      let Tempo 
       if (Auto) { 
       Tempo = setTimeout (NumeroDeIncrementos, 1000)}
+      return ()=> {clearTimeout(Tempo)}
     },
   )
 
