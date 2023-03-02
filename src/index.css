@@ -13,11 +13,41 @@ h1 {
   color: cadetblue;
   margin: 1rem;
   font-size: 13rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;
+  background-color: rgba(222, 202, 240, 0.753);
+}
+
+.card-body {
+  display: flex;
+  flex-flow: wrap column;
 }
 
 .btn-toolbar {
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  margin-bottom: 30px;
+}
 
+.mr-2 {
+  font-family:Arial, Helvetica, sans-serif;
+  font-variant: small-caps;
+  margin: 0.3rem;
+}
+
+.mr-2 * {
+  font-size: 30px;
+  font-family:Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.btn .badge {
+  font-size: small;
+  color:rgb(93, 159, 235);
+  vertical-align:middle;
 }
