@@ -1,11 +1,6 @@
 .Boton {
-    padding: 1.5rem;
-    margin: 0.5rem;
-    font-size: 2rem;
-    background-color: rgba(229, 166, 248, 0.459);
-    color: cadetblue;
-    border-color:currentColor;
-    border-radius: 1rem;
-    box-shadow: 1px 1px 10px rgb(104, 104, 104);
-    font-family:monospace;
+text-align: center;
+align-self: center;
+align-items: center;
+justify-content: center;
 }

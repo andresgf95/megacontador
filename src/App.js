@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Boton from './components/boton.jsx';
-import NovoBoton from './components/NovoBoton.jsx'
+import NovoBoton from './components/NovoBoton.jsx';
+import styles from './App.css';
 
 function App() {
 
@@ -45,12 +46,12 @@ function App() {
     SetValor(Reinicio)
   }
 
-  useEffect(
+  useEffect (
       ()=> {
-      let Tempo  
+      let Tempo
+      let SuperTempo  
       if (Auto) { 
       Tempo = setTimeout (NumeroDeIncrementos, 1000)}
-      return ()=> {clearTimeout(Tempo)}
     },
   )
 
@@ -82,39 +83,25 @@ function App() {
   )
 
   return (
-  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-      <div class="btn-group mr-2" role="group" aria-label="First group">
-        <Boton texto='+' operador={NumeroDeIncrementos} type="danger"/>
-        <Boton texto='-' operador={NumeroDeDisminucion} type="secondary"/>
-      </div>
-      <div class="btn-group mr-2" role="group" aria-label="Second group">
-        <button type="button" class="btn btn-secondary">5</button>
-        <button type="button" class="btn btn-secondary">6</button>
-        <button type="button" class="btn btn-secondary">7</button>
-      </div>
-      <div class="btn-group" role="group" aria-label="Third group">
-        <button type="button" class="btn btn-secondary">8</button>
-      </div>
-
-
-
-
-
-
-
     <>
       <h1>{Valor}</h1>
-      <Boton texto='+' operador={NumeroDeIncrementos}/>
-      <Boton texto='-' operador={NumeroDeDisminucion}/>
-      <NovoBoton texto='Auto' operador={ContadorAuto}/>
-      <NovoBoton texto='stop' operador={PararContador}/>
-      <NovoBoton texto='Turbo' operador={ContadorTurbo}/>
-      <NovoBoton texto='Hiper Turbo' operador={ContadorHiperTurbo}/>
-      <NovoBoton texto='Ultra Turbo' operador={ContadorUltraTurbo}/>
-      <NovoBoton texto='Reiniciar' operador={Reiniciar}/>
+      <div className={styles.App} class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <Boton texto='+' operador={NumeroDeIncrementos} type="primary" />
+          <Boton texto='-' operador={NumeroDeDisminucion} type="secondary" />
+        </div>
+        <div class="btn-group mr-2" role="group" aria-label="Second group">
+          <NovoBoton texto='Auto' operador={ContadorAuto} type="info" />
+          <NovoBoton texto='Turbo' operador={ContadorTurbo} type="info" />
+          <NovoBoton texto='Super Turbo' operador={ContadorHiperTurbo} type="info" />
+          <NovoBoton texto='Ultra Turbo' operador={ContadorUltraTurbo} type="info" />
+        </div>
+        <div>
+          <NovoBoton texto='STOP' operador={PararContador} type="danger" />
+          <NovoBoton texto='Reiniciar' operador={Reiniciar} type="warning" />
+        </div>
+      </div>
     </>
-  </div>
-
   );
 }
 

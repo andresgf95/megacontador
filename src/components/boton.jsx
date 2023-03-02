@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import styles from './boton.module.css'
 
 function Boton({texto, operador, type="primary"}) {
 
@@ -11,6 +12,7 @@ function Boton({texto, operador, type="primary"}) {
     }
 
   return (
+  <span className={styles.Boton}>
   <button className={
           "btn " +
           ( type === "primary" ? "btn-primary" : "") +
@@ -26,6 +28,7 @@ function Boton({texto, operador, type="primary"}) {
    onClick={BotonClick}>
     {texto}<span className='badge badge-light'>{Click}</span>
   </button>
+  </span>
   )
 }
 
