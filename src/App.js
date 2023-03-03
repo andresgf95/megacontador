@@ -21,19 +21,19 @@ function App() {
   }
 
   function ContadorAuto() {
-    SetAuto(true) || SetTurbo(false) || SetHiperTurbo(false) || SetUltraTurbo(false)
+    SetAuto(!Auto) || SetTurbo(false) || SetHiperTurbo(false) || SetUltraTurbo(false)
   }
 
   function ContadorTurbo() {
-    SetTurbo(true) || SetAuto(false) || SetHiperTurbo(false) || SetUltraTurbo(false)
+    SetTurbo(!Turbo) || SetAuto(false) || SetHiperTurbo(false) || SetUltraTurbo(false)
   }
 
   function ContadorHiperTurbo() {
-    SetHiperTurbo(true) || SetAuto(false) || SetTurbo(false) || SetUltraTurbo(false)
+    SetHiperTurbo(!HiperTurbo) || SetAuto(false) || SetTurbo(false) || SetUltraTurbo(false)
   }
 
   function ContadorUltraTurbo() {
-    SetUltraTurbo(true) || SetAuto(false) || SetTurbo(false) || SetHiperTurbo(false)
+    SetUltraTurbo(!UltraTurbo) || SetAuto(false) || SetTurbo(false) || SetHiperTurbo(false)
   }
 
   function PararContador() {
